@@ -1,6 +1,5 @@
 package com.sergiocasero.notifikationmanager
 
-import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import java.util.*
 
@@ -13,15 +12,13 @@ abstract class NotifikationActivity : AppCompatActivity(), Observer {
 
     protected abstract fun onNotificationReceived(any: Any)
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
+    override fun onResume() {
+        super.onResume()
         notificationManager.addObserver(this)
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-
+    override fun onPause() {
+        super.onPause()
         notificationManager.deleteObserver(this)
     }
 

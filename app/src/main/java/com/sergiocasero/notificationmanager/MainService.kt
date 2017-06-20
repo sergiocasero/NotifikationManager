@@ -16,7 +16,7 @@ class MainService : Service() {
     private val notificationManager = NotifikationManager
 
     companion object {
-        val DELAY = 60000L
+        val DELAY = 10000L
     }
 
     // Only for sample, don't use this method in a Service!
@@ -42,7 +42,7 @@ class MainService : Service() {
         if (notificationManager.isAppInForeground()) {
             notificationManager.notify("Hello foreground! :)")
         } else {
-            displayNotification(0, "Background", "Hello Background!! :)")
+            displayNotification(description = "Hello Background!! :)")
         }
     }
 }
