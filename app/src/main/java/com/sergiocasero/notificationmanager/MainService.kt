@@ -26,11 +26,7 @@ class MainService : Service() {
         val handler = Handler()
         val runnable = object : Runnable {
             override fun run() {
-                if (notificationManager.isAppInForeground()) {
-                    notificationManager.notify("Hello foreground! :)")
-                } else {
-                    displayNotification(0, "Background", "Hello Background!! :)")
-                }
+                handleNotification()
                 handler.postDelayed(this, DELAY)
             }
         }
@@ -40,5 +36,13 @@ class MainService : Service() {
 
     override fun onBind(p0: Intent?): IBinder? {
         return null
+    }
+
+    private fun handleNotification() {
+        if (notificationManager.isAppInForeground()) {
+            notificationManager.notify("Hello foreground! :)")
+        } else {
+            displayNotification(0, "Background", "Hello Background!! :)")
+        }
     }
 }
