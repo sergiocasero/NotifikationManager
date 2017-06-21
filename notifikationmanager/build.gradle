@@ -1,6 +1,8 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
+def version = '0.1.0'
+
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.3"
@@ -10,7 +12,7 @@ android {
         minSdkVersion 16
         targetSdkVersion 25
         versionCode 1
-        versionName "1.0"
+        versionName version
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -35,4 +37,25 @@ dependencies {
 }
 repositories {
     mavenCentral()
+    jcenter()
+}
+
+task javadoc(type: Javadoc) {
+    excludes = ['**/*.kt'] // < ---- Exclude all kotlin files from javadoc file.
+    // ...
+}
+
+tasks.withType(Javadoc).all {
+    enabled = false
+}
+
+apply plugin: 'com.novoda.bintray-release'
+
+publish {
+    userOrg = 'sergiocasero'
+    groupId = 'com.sergiocasero'
+    artifactId = 'notifikationmanager'
+    publishVersion = version
+    desc = 'This library helps you to know when the app is in background or not, and if the app is in foreground, you can send the notification to your current activity!'
+    website = 'https://github.com/sergiocasero/NotifikationManager'
 }

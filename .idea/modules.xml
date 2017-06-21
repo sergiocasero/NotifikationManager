@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/NotificationManager.iml" filepath="$PROJECT_DIR$/NotificationManager.iml" />
+      <module fileurl="file://C:\Users\Sergio\AndroidStudioProjects\NotifikationManager\NotificationManager.iml" filepath="C:\Users\Sergio\AndroidStudioProjects\NotifikationManager\NotificationManager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NotifikationManager.iml" filepath="$PROJECT_DIR$/NotifikationManager.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\Sergio\AndroidStudioProjects\NotifikationManager\app\app.iml" filepath="C:\Users\Sergio\AndroidStudioProjects\NotifikationManager\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/notifikationmanager/notifikationmanager.iml" filepath="$PROJECT_DIR$/notifikationmanager/notifikationmanager.iml" />
+      <module fileurl="file://C:\Users\Sergio\AndroidStudioProjects\NotifikationManager\notifikationmanager\notifikationmanager.iml" filepath="C:\Users\Sergio\AndroidStudioProjects\NotifikationManager\notifikationmanager\notifikationmanager.iml" />
     </modules>
   </component>
 </project>
