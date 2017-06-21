@@ -1,6 +1,6 @@
 Notifikation Manager
 ===================
-This library helps you to know when the app is in background or not, and if the app is in foreground, you can send the notification to your activity!
+This library helps you to know when the app is in background or not, and if the app is in foreground, you can send the notification to your current activity!
 
 
 ![alt text](https://github.com/sergiocasero/NotifikationManager/blob/master/art/sample.gif "Sample")
