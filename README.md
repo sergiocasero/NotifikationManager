@@ -25,7 +25,7 @@ public class BroadCastReceiver extends BroadcastReceiver {
 }
 ```
 
-And in your activity, you must implement Observer and call to "addObserver" and "removeObverver" methods:
+And in your activity, you must implement Observer and call to "addObserver" and "deleteObverver" methods:
 ```java
 public class MyActivity extends AppCompatActivity implements Observer {
 
